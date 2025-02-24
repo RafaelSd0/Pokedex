@@ -1,5 +1,5 @@
 "use client"
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
 import axios from "axios";
 import { useEffect, useState } from "react";
