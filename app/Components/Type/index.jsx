@@ -29,6 +29,7 @@ function getColorByType(type) {
     fighting: "orange",
     dragon: "indigo",
     bug: "chartreuse",
+    rock: "saddlebrown",
     normal: "gray"
   };
 
