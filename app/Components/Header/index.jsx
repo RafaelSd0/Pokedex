@@ -8,6 +8,7 @@ import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -57,7 +58,9 @@ export default function Header( {pokemonFilter} ) {
       <AppBar position="static" sx={{ backgroundColor: "black" }}>
         <Toolbar>
           <Box display="flex" gap={5} justifyContent="space-between" width="100%">
+            <Link href={"/"}>
             <Image  src="https://th.bing.com/th/id/R.166c3adb6c3150c596e8fd75aae6fb0a?rik=AgySNAtTku0dxg&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f07%2fPok%c3%a9mon_logo.png&ehk=qOQewe8jlQDEb75Dsg5lFydn3LWbIbxRGjIoWlzDcA8%3d&risl=&pid=ImgRaw&r=0" height={30} width={90} alt='pokemon'  />
+            </Link>
               <Search onChange={ (e) => pokemonFilter(e.target.value) } >
                 <SearchIconWrapper>
                   <SearchIcon />

@@ -30,8 +30,10 @@ function getColorByType(type) {
     dragon: "indigo",
     bug: "chartreuse",
     rock: "saddlebrown",
+    ghost: "rgb(49, 25, 71)",
+    flying: "rgb(180, 180, 180)",
     normal: "gray"
   };
 
-  return colors[type.toLowerCase()] || "transparent"; // Default color
+  return colors[type] || "transparent";
 }
