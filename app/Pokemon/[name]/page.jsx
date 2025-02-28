@@ -6,7 +6,6 @@ import { useParams } from 'next/navigation';
 import Header from '@/app/Components/Header';
 import styles from '@/app/Pokemon/[name]/page.module.css'
 import { TypeHandler } from '@/app/Components/Type';
-import Image from 'next/image';
 
 const PokemonDetailsPage = () => {
   const params = useParams();
@@ -33,27 +32,26 @@ const PokemonDetailsPage = () => {
     fetchPokemonData();
   }, [pokemonName]);
 
-  
-
   if (loading) return <p>Carregando...</p>;
   if (error) return <p>Erro: {error}</p>;
+
+  const gif = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemonData.id}.gif`;
 
   return (
     <div>
       <Header/>
       <div className={styles.container}>
-        <h1 className={styles.title}>{pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1).toLowerCase()}</h1>
+        <h1>{pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1).toLowerCase()}</h1>
         {pokemonData && (
           <div className={styles.content}>
             <img
-              src={pokemonData.sprites.front_default}
+              src={gif}
               alt={pokemonData.name}
-              height={300}
-              width={300}
+              height={250}
             />
-            <TypeHandler types={pokemonData.types}/>
           </div>
         )}
+        <TypeHandler types={pokemonData.types}/>
       </div>
     </div>
   );

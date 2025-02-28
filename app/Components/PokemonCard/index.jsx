@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { CardMedia } from '@mui/material';
 import { TypeHandler } from '../Type';
 
-export default function PokemonCard({ name, image, types}) {
+export default function PokemonCard({ name, image, types, id }) {
   return (
     <Link href={`/Pokemon/${name}`} passHref style={{ textDecoration: 'none' }}>
       <Card sx={{ maxWidth: 345, cursor: 'pointer' }}>

@@ -5,6 +5,10 @@
 .container {
   text-align: center;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
 }
 
 .content {
@@ -15,13 +19,13 @@
   align-items: center;
   text-align: center;
   font-family: sans-serif;
-  background-color: rgb(236, 236, 236);
+  background-image: url('https://i.pinimg.com/originals/76/47/44/76474427883430f2664fb570ac5c77c6.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 400px;
+  height: 400px;
   margin: auto;
   padding-bottom: 15px;
   border-radius: 50px;
-}
-
-.title{
-  padding-bottom: 7px;
 }

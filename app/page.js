@@ -6,10 +6,7 @@ import { useEffect, useState } from "react";
 import Header from "@/app/Components/Header/index"
 import PokemonCard from "@/app/Components/PokemonCard/index"
 
-
-
 export default function Home() {
-
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
@@ -18,7 +15,7 @@ export default function Home() {
 
   const getPokemons = () => {
     var endpoints = [];
-    for (var i = 1; i < 200; i++) {
+    for (var i = 1; i <= 151; i++) {
       endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
     }
     axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
@@ -45,7 +42,12 @@ export default function Home() {
         <Grid container spacing={3}>
           {pokemons.map((pokemon, key) => (
             <Grid item xs={12} sm={6} md={4} lg={2} key={key}>
-              <PokemonCard name={pokemon.data.name} image={pokemon.data.sprites.front_default} types={pokemon.data.types} />
+              <PokemonCard 
+                name={pokemon.data.name} 
+                image={pokemon.data.sprites.front_default} 
+                types={pokemon.data.types} 
+                id={pokemon.data.id} 
+              />
             </Grid>
           ))}
         </Grid>

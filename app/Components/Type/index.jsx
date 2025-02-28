@@ -20,7 +20,7 @@ function getColorByType(type) {
     fire: "red",
     water: "blue",
     grass: "green",
-    ground: "brown",
+    ground: "rgb(175, 134, 0)",
     ice: "cyan",
     poison: "purple",
     psychic: "pink",
