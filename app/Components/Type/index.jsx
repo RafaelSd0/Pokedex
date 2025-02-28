@@ -26,7 +26,7 @@ function getColorByType(type) {
     psychic: "pink",
     dark: "black",
     fairy: "lightpink",
-    fighting: "orange",
+    fighting: "rgb(87, 11, 11)",
     dragon: "indigo",
     bug: "chartreuse",
     rock: "saddlebrown",
